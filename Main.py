@@ -1,3 +1,5 @@
+import poetry
+import pytest
 class item:
     price_discount = 0.85
 
