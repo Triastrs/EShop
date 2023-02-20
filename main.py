@@ -1,4 +1,4 @@
-class Item:
+class Item:  # добовляем новый класс
     pay_rate = 0.85
 
     def __init__(self, item_name, item_price, amount):
