@@ -16,7 +16,7 @@ class Item:
 
     @property
     def item_name(self) -> str:
-        """проверка, что при задании названия товара длина его не превышает 10 символов.
+        """не превышает 10 символов
         При привышении - исключение"""
         return self.__item_name
 
@@ -29,7 +29,7 @@ class Item:
 
     @classmethod
     def instantiate_from_csv(cls) -> 'Item':
-        """метод класса, выполняющий альтернативный способ создания объектов-товаров. Из csv-файла"""
+        """альтернативный способ создания объектов-товаров. Из csv-файла"""
         with open('items.csv') as csvitems:
             csvreader = csv.DictReader(csvitems)
             for i in csvreader:
@@ -46,7 +46,7 @@ class Item:
 
     @staticmethod
     def is_integers(item_price_type) -> bool:
-        """Статический метод, который проверяет, является ли число, полученое из csv-файла целым"""
+        """полученое из csv-файла целым"""
         if float(item_price_type) % 1 == 0 or float(item_price_type) % 1 == 0.0:
             return True
         else:
